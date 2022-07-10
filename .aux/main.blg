@@ -1,0 +1,15 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is '.aux\main.blg'
+[125] biber-MSWIN64:340> INFO - === 
+[170] Biber.pm:415> INFO - Reading '.aux\main.bcf'
+[318] Biber.pm:949> INFO - Using all citekeys in bib section 0
+[335] Biber.pm:4340> INFO - Processing section 0
+[350] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography/bibliography.bib' for section 0
+[403] bibtex.pm:1689> INFO - LaTeX decoding ...
+[410] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography/bibliography.bib'
+[457] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[458] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[458] Biber.pm:4168> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[458] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[460] bbl.pm:654> INFO - Writing '.aux\main.bbl' with encoding 'UTF-8'
+[461] bbl.pm:757> INFO - Output to .aux\main.bbl

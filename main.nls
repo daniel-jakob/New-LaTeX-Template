@@ -1,0 +1,20 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{\(c\)}]\begingroup \href{https://physics.nist.gov/cgi-bin/cuu/Value?c} {Speed of light in a vacuum} \nomunit{\SI{299792458}{\meter\per\second}}\nomeqref {0}\nompageref{4}
+  \item [{\(G\)}]\begingroup \href{https://physics.nist.gov/cgi-bin/cuu/Value?bg} {Gravitational constant} \nomunit{\SI{6.67430e-11}{\meter\cubed\per\kilogram\per\second\squared}}\nomeqref {0}\nompageref{4}
+  \item [{\(h\)}]\begingroup \href{https://physics.nist.gov/cgi-bin/cuu/Value?h} {Planck constant} \nomunit{\SI{6.62607015e-34}{\joule\per\hertz}}\nomeqref {0}\nompageref{4}
+\nomgroup{S}
+  \item [{\(\delta\)}]\begingroup Deflection [mm]\nomeqref {0}\nompageref{4}
+  \item [{\(\mathcal{F}\)}]\begingroup Form factor [$-$]\nomeqref {0}\nompageref{4}
+  \item [{\(\sigma\)}]\begingroup stress [MPa]\nomeqref {0}\nompageref{4}
+  \item [{\(\varepsilon\)}]\begingroup deformation [mm]\nomeqref {0}\nompageref{4}
+  \item [{\(F\)}]\begingroup Force [N]\nomeqref {0}\nompageref{4}
+  \item [{\(I\)}]\begingroup Second moment of area $\left[\si{\meter\tothe{4}}\right]$\nomeqref {0}\nompageref{4}
+  \item [{\(M\)}]\begingroup Moment [Nm]\nomeqref {0}\nompageref{4}
+  \item [{\(W\)}]\begingroup Load [N]\nomeqref {0}\nompageref{4}
+\nomgroup{U}
+  \item [{p}]\begingroup Plastic\nomeqref {0}\nompageref{4}
+  \item [{y}]\begingroup Yield\nomeqref {0}\nompageref{4}
+
+\end{thenomenclature}

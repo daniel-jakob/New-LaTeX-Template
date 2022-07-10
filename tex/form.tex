@@ -1,0 +1,43 @@
+\thispagestyle{assessmentform}
+
+\begin{figure}[H] % UCD Crest picture
+\begin{center}
+\vspace{-3em}
+\includegraphics[width=0.1\textwidth,left]{ucd_crest}
+\end{center}
+\end{figure}
+\vspace{-2.5em}
+\section*{Assessment Submission Form}
+\addcontentsline{toc}{section}{Assessment Submission Form}
+\renewcommand{\arraystretch}{1.5}
+\makeatletter
+
+\begin{table}[htpb]
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+Student Name       & \@firstname\;\@familyname \\ \hline
+Student Number     & \@studentnumber \\ \hline
+Assessment Title   & \@subtitle \\ \hline
+Module Code        & \@modulecode \\ \hline
+Module Title       & \@modulename \\ \hline
+Module Coordinator & \@modulecoord \\ \hline
+Date Submitted     & \DTMusedate{submitdate} \\ \hline
+Date Received      &  \\ \hline
+Grade/Mark         &  \\ \hline
+\end{tabularx}
+\end{table}
+\makeatother
+\renewcommand{\arraystretch}{1.1}
+\textbf{A SIGNED COPY OF THIS FORM MUST ACCOMPANY ALL SUBMISSIONS FOR ASSESSMENT.\\\\STUDENTS SHOULD KEEP A COPY OF ALL WORK SUBMITTED.\\\\Procedures for Submission and Late Submission\\}
+Ensure that you have checked the Adult Education Centre's procedures for the submission of assessments.\\
+\textbf{Note:} There are penalties for the late submission of assessments. For further information please see the Adult Education \textit{Assessment Guidelines} publication or the website at \href{http://www.ucd.ie/adulted}{www.ucd.ie/adulted}.\\\\
+\textbf{Plagiarism} is the unacknowledged inclusion of another person's writings or ideas or works, in any formally presented work (including essays, examinations, projects, laboratory reports or presentations). The penalties associated with plagiarism are designed to impose sanctions that reflect the seriousness of the University's commitment to academic integrity. Ensure that you have read the University's \textit{\textbf{Briefing for Students on Academic Integrity and Plagiarism}} and the UCD \textit{\textbf{Plagiarism Statement, Plagiarism Policy and Procedures}}, (\href{http://www.ucd.ie/registrar/}{http://www.ucd.ie/registrar/}).\\\\
+\noindent\fbox{%
+    \parbox{0.9825\textwidth}{%
+        \textbf{Declaration of Authorship}\\ I declare that all material in this assessment is my own work except where there is clear acknowledgement and appropriate reference to the work of others.\\\\
+        \begin{tabular}{lm{5cm}ll}
+        \textbf{Signed} & \includegraphics[height=1.5cm,keepaspectratio]{signature} & \textbf{Date} & \DTMusedate{submitdate}
+        \end{tabular}
+    }%
+}
+\newpage

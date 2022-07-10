@@ -1,0 +1,55 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{function}\PYG{+w}{ }[]\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nf}{makelink}\PYG{p}{(}x1, y1, z1, x2, y2, z2, t, c\PYG{p}{)}
+\PYG{c}{\PYGZpc{}makelink(x1, y1, z1, x2, y2, z2, thickness)}
+\PYG{c}{\PYGZpc{}   MAKELINK plots a square based bar in 3D space }
+\PYG{c}{\PYGZpc{}   takes 8 inputs:}
+\PYG{c}{\PYGZpc{}   x1, y2, z1 are the 3D coordinates of the start of the link}
+\PYG{c}{\PYGZpc{}   x2, y2, z2 are the 3D coordinates of the end of the link}
+\PYG{c}{\PYGZpc{}   t is the thickness of the bar}
+\PYG{c}{\PYGZpc{}   c is the colour (RGB array) of the bar}
+
+\PYG{c}{\PYGZpc{} Author: Daniel Jakob (18409686), 06/03/2021, Version 1.2}
+
+\PYG{n}{t}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{t}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{ }\PYG{c}{\PYGZpc{} bar thickness halved, centering bar \label{line:thickhalf}}
+\PYG{k}{if}\PYG{+w}{ }\PYG{n}{z1}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{z2}\PYG{+w}{ }\PYG{c}{\PYGZpc{} flat members \label{line:flatcheck}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{y1}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{y2}\PYG{+w}{ }\PYG{c}{\PYGZpc{} going in x\PYGZhy{}direction}
+\PYG{+w}{        }\PYG{n}{vertices}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{  }\PYG{p}{[}\PYG{n}{x1}\PYG{+w}{ }\PYG{n}{y1}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{p}{;}\PYG{+w}{ }\PYG{esc}{\label{line:xbarstart}}
+\PYG{+w}{                     }\PYG{esc}{\textcolor{mytext}{x1 y1+t z1+t};}\PYG{+w}{    }
+\PYG{+w}{                     }\PYG{esc}{\textcolor{mytext}{x1 y1-t z1+t};}
+\PYG{+w}{                     }\PYG{esc}{\textcolor{mytext}{x1 y1-t z1-t};}
+\PYG{+w}{                     }\PYG{esc}{\textcolor{mytext}{x2 y2+t z2-t};}
+\PYG{+w}{                     }\PYG{esc}{\textcolor{mytext}{x2 y2+t z2+t};}
+\PYG{+w}{                     }\PYG{esc}{\textcolor{mytext}{x2 y2-t z2+t};}
+\PYG{+w}{                     }\PYG{esc}{\textcolor{mytext}{x2 y2-t z2-t}];\label{line:xbarfinish}}
+
+\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{c}{\PYGZpc{} going in y\PYGZhy{}direction (must rotate by 90 deg)}
+\PYG{+w}{        }\PYG{n}{vertices}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{  }\PYG{p}{[}\PYG{n}{x1}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{+w}{ }\PYG{n}{z1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{p}{;}
+\PYG{+w}{                     }\PYG{n}{x1}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{+w}{ }\PYG{n}{z1}\PYG{o}{+}\PYG{n}{t}\PYG{p}{;}\PYG{+w}{    }
+\PYG{+w}{                     }\PYG{n}{x1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{+w}{ }\PYG{n}{z1}\PYG{o}{+}\PYG{n}{t}\PYG{p}{;}
+\PYG{+w}{                     }\PYG{n}{x1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{+w}{ }\PYG{n}{z1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{p}{;}
+\PYG{+w}{                     }\PYG{n}{x2}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{+w}{ }\PYG{n}{z2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{p}{;}
+\PYG{+w}{                     }\PYG{n}{x2}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{+w}{ }\PYG{n}{z2}\PYG{o}{+}\PYG{n}{t}\PYG{p}{;}
+\PYG{+w}{                     }\PYG{n}{x2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{+w}{ }\PYG{n}{z2}\PYG{o}{+}\PYG{n}{t}\PYG{p}{;}
+\PYG{+w}{                     }\PYG{n}{x2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{+w}{ }\PYG{n}{z2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{end}
+\PYG{k}{else}\PYG{+w}{ }\PYG{c}{\PYGZpc{} non\PYGZhy{}flat members}
+\PYG{+w}{    }\PYG{n}{vertices}\PYG{p}{=}\PYG{+w}{   }\PYG{p}{[}\PYG{n}{x1}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z1}\PYG{p}{;}
+\PYG{+w}{                 }\PYG{n}{x1}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z1}\PYG{p}{;}\PYG{+w}{    }
+\PYG{+w}{                 }\PYG{n}{x1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z1}\PYG{p}{;}
+\PYG{+w}{                 }\PYG{n}{x1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y1}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z1}\PYG{p}{;}
+\PYG{+w}{                 }\PYG{n}{x2}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z2}\PYG{p}{;}
+\PYG{+w}{                 }\PYG{n}{x2}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z2}\PYG{p}{;}
+\PYG{+w}{                 }\PYG{n}{x2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{o}{+}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z2}\PYG{p}{;}
+\PYG{+w}{                 }\PYG{n}{x2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{y2}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{+w}{ }\PYG{n}{z2}\PYG{p}{]}\PYG{p}{;}
+
+\PYG{k}{end}
+
+\PYG{n}{faces}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{;}\PYG{+w}{ }\PYG{esc}{\label{line:linkfacesstart}}
+\PYG{+w}{         }\PYG{esc}{\textcolor{mynumber}{1 2 6 5}}\PYG{p}{;}
+\PYG{+w}{         }\PYG{esc}{\textcolor{mynumber}{2 3 7 6}}\PYG{p}{;}
+\PYG{+w}{         }\PYG{esc}{\textcolor{mynumber}{3 4 8 7}}\PYG{p}{;}
+\PYG{+w}{         }\PYG{esc}{\textcolor{mynumber}{4 1 5 8}}\PYG{p}{;}
+\PYG{+w}{         }\PYG{esc}{\textcolor{mynumber}{5 6 7 8}}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{esc}{\label{line:linkfacesfinish}}
+\PYG{n+nb}{patch}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Vertices\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{vertices}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Faces\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{faces}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{FaceColor\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{c}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{esc}{\label{line:barpatch}}
+\PYG{k}{end}
+\end{Verbatim}

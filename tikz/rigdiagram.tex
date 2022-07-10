@@ -1,0 +1,47 @@
+\begin{tikzpicture}[every text node part/.style={align=center}]
+        % Include the image in a node
+        
+        \node [
+            above right,
+            inner sep=0] (image) at (0,0) {\includegraphics[width=0.5\textwidth]{guntrig}};
+        
+        % Create scope with normalized axes
+        \begin{scope}[
+        x={($0.1*(image.south east)$)},
+        y={($0.1*(image.north west)$)}]
+        
+        %Grid
+            %\draw[lightgray,step=0.5] (image.south west) grid (image.north east);
+        
+        %Axes' labels
+            %\foreach \x in {0,1,...,10} { \node [below] at (\x,0) {\x}; }
+            %\foreach \y in {0,1,...,10} { \node [left] at (0,\y) {\y};}
+        
+        % Labels
+            \draw[latex-, very thick,green] (2.8,7.5) -- ++(-3,0)
+            node[left,black]{\small Measuring\\gauge};
+            
+            \draw[stealth-, very thick,green] (5.5,9.5) -- ++(1,0)
+            node[right,black]{\small Cable with reversing\\pulley for counterweight};
+    
+            \draw[stealth-, very thick,green] (3.5,2.75) -- ++(-3.75,1)
+            node[left,black]{\small Counterweight};
+    
+            \draw[stealth-, very thick,green] (1.5,2) -- ++(-2,0)
+            node[left,black]{\small Magnetic foot\\for measuring};
+    
+            \draw[stealth-, very thick,green] (7,3.75) -- ++(1.8,0)
+            node[right,black]{\small Supporting column};
+    
+            \draw[stealth-, very thick,green] (7.75,5.5) -- ++(0,1)
+            node[above,black]{\small Loading Plate};
+    
+            \draw[stealth-, very thick,green] (9,2.5) -- ++(1.25,0)
+            node[right,black]{\small Load Weight};
+    
+            \draw[stealth-, very thick,green] (8.5,1) -- ++(1.5,0)
+            node[right,black]{\small Frame};
+        
+        \end{scope}
+        
+\end{tikzpicture}

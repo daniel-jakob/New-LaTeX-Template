@@ -1,0 +1,27 @@
+\maketitle % Insert the title, author and date
+\thispagestyle{empty} % No header, footer or page number on title page 
+
+\begin{figure}[H] % UCD Crest picture
+\begin{center}
+\includegraphics[width=0.15\textwidth]{ucd_crest}
+\end{center}
+\end{figure}
+\makeatletter
+\begin{center}
+\begin{tabular}{r l}
+\\
+Module Coordinator: & \@modulecoord\\ % Instructor/supervisor
+Date Due: & \DTMusedate{duedate} \\  % Date the report is due
+Lab T.A.: & \@labta \\
+Date of Lab: & \DTMusedate{labdate}
+\\\\
+\end{tabular}
+\end{center}
+\makeatother
+
+\pdfbookmark[1]{Abstract}{abstract}
+\begin{abstract}
+\noindent\normalsize In this experiment, a force is applied to copper specimen attached to a loading plate where bending, torsion, and any combination of the two can be applied. The resulting deflections and remaining deflections are measured for corresponding proportions of bending and torsion. The results are compared to two theories regarding bending and torsion in materials, max shear stress yield criterion and maximum principal stress failure criterion. Ultimately, the former reflects the material's behaviour better. 
+\end{abstract}
+
+\clearpage

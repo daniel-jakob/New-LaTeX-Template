@@ -1,0 +1,21 @@
+\begin{tikzpicture}[trim axis left, trim axis right]
+    \begin{axis}[
+        xlabel={Remaing Deflection, $\Delta w$ $\sbk{\SI{E-5}{\meter}}$},
+        ylabel={Load, F [N]},
+        %legend pos=north west,
+        xtick align=outside,
+        ytick align=outside,
+        ytick pos=left,
+        xtick pos=left,
+        ymajorgrids=true,
+        grid style=dashed,
+        xmin=0, ymin=0, xmax=12
+    ]
+    \addplot[blue] table{data/run_2_0_degree.txt};  
+    %\addplot +[only marks, mark = triangle*, mark options={solid, scale=0.90, fill=white}, blue, raw gnuplot] gnuplot {plot 'data/run_2_0_degree.txt' with points;};
+    %\addplot +[no markers, raw gnuplot, blue, dashed] gnuplot {plot 'data/run_2_0_degree.txt' smooth acsplines;};
+    \addplot[red, dashed, ->] coordinates{(10,0) (10,15.4)};
+    \addplot[red, dashed, ->] coordinates{(10,15.4) (0,15.4)};
+    \draw (1.5,16.5) node[text=red] {$\approx15.4$};
+    \end{axis}
+\end{tikzpicture}
